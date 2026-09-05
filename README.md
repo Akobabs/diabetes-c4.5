@@ -76,7 +76,7 @@ The exact order is:
 1. Locate/create the Python environment and locate/download Java. Install `requirements.lock`, reinstall this project in editable mode, and run `pip check`.
 2. Check dependency versions, JVM startup, the source ARFF checksum and the required **10 outer / 5 inner folds**. Check that a local frontend port is available.
 3. Recreate `data/derived/pima_diabetes.csv` from the preserved ARFF and verify its reference SHA-256 checksum.
-4. Archive previous `results/full`, `artifacts/final`, `docs/IMPLEMENTATION_RESULTS.md` and `docs/screenshots` under `.runtime/backups/<timestamp>/`, preserving their relative paths. Source data and source code are not moved.
+4. Test the Windows archive/error-handling helpers with isolated fixture files, then archive previous `results/full`, `artifacts/final`, `docs/IMPLEMENTATION_RESULTS.md` and `docs/screenshots` under `.runtime/backups/<timestamp>/`, preserving their relative paths. Source data and source code are not moved.
 5. Run the core data-pipeline and J48 integration tests.
 6. Run fresh nested evaluation for J48, Gaussian Naive Bayes and Logistic Regression, plus the fixed J48 comparisons. Save new splits, parameter searches, predictions, metrics and plots.
 7. Run a fresh full-data J48 parameter search and fit the final demonstration model; save preprocessing, header, tree and provenance metadata.
