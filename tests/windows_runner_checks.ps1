@@ -1,5 +1,5 @@
 # Focused integration checks for output archiving and fail-fast native commands.
-# Run from the project root: powershell -NoProfile -File tests/windows_runner_checks.ps1
+# Run: powershell -NoProfile -ExecutionPolicy Bypass -File tests/windows_runner_checks.ps1
 $ErrorActionPreference = 'Stop'
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $parseErrors = $null
