@@ -5,6 +5,9 @@ import streamlit as st
 from diabetes_c45.data import FEATURES, UNITS, sha256
 from diabetes_c45.paths import ARTIFACTS, RESULTS
 from diabetes_c45.predict import PredictionService
+from diabetes_c45.ui_guides import CATEGORIES, PIMA, guide_button
+from diabetes_c45.paths import ROOT
+import runpy
 
 st.set_page_config(page_title="Pima | Diabetes research", page_icon="🌿", layout="wide")
 st.markdown("""<style>
@@ -19,7 +22,11 @@ def load_service(manifest_content):
     return PredictionService(ARTIFACTS)
 
 
-st.sidebar.title("Pima research")
+st.sidebar.title("Diabetes research")
+category = st.sidebar.selectbox("Prediction category", list(CATEGORIES), format_func=CATEGORIES.get, key="prediction_category")
+if category != "pima":
+    runpy.run_path(str(ROOT / "app/robustness_app.py"), init_globals={"EMBEDDED": True, "FORCED_DATASET": category})
+    st.stop()
 st.sidebar.caption("C4.5 · Interpretable classification")
 page = st.sidebar.radio("Explore", ["Predict", "Research results", "Decision tree", "About the study"])
 st.sidebar.divider()
@@ -40,7 +47,9 @@ manifest = service.manifest
 
 if page == "Predict":
     st.caption("PATIENT INPUTS")
-    st.title("Understand the prediction.")
+    st.title("Women's diabetes: clinical measurements")
+    st.caption("Pima study · Diabetes classification, not pregnancy or gestational diabetes prediction.")
+    guide_button("pima")
     st.write("Enter the study measurements to see the model's classification and the decision path behind it.")
     st.caption("Glucose and insulin refer to two-hour test measurements; blood pressure is diastolic. Unknown inputs are filled using saved training medians.")
     labels = {"Pregnancies": "Pregnancies", "Glucose": "2-hour plasma glucose", "BloodPressure": "Diastolic blood pressure",
@@ -56,7 +65,7 @@ if page == "Predict":
                 values[c] = st.number_input(f"{labels[c]} ({UNITS[c]})", min_value=minimum, value=None,
                                              step=1 if integer else (.001 if c == "DiabetesPedigreeFunction" else .1),
                                              format="%d" if integer else ("%.3f" if c == "DiabetesPedigreeFunction" else "%.1f"),
-                                             placeholder="Enter value or leave unknown", key=c)
+                                             placeholder="Enter value or leave unknown", key=c, help=PIMA[c])
         submitted = st.form_submit_button("Show prediction", type="primary", width="stretch")
     if submitted:
         if all(v is None for v in values.values()):
