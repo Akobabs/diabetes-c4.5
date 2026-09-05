@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "outer_folds": 10,
+  "inner_folds": 5,
+  "confidence_factors": [0.05, 0.1, 0.25, 0.4],
+  "minimum_leaf_sizes": [2, 5, 10, 20],
+  "smote": [false, true],
+  "cap_outliers": [false, true],
+  "feature_counts": [8, 5],
+  "naive_bayes_smoothing": [1e-9, 1e-8, 1e-7],
+  "logistic_c": [0.1, 1.0, 10.0],
+  "selection_metric": "roc_auc",
+  "threshold": 0.5
+}
