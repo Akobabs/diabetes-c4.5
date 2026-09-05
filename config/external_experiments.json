@@ -1,0 +1,9 @@
+{
+  "seed": 42,
+  "sylhet": {"protocol": "nested_stratified_group_cv", "outer_folds": 5, "inner_folds": 3, "confidence": [0.1, 0.25], "min_leaf": [2, 10, 20], "balanced": [false, true]},
+  "cdc": {"protocol": "grouped_train_validation_test", "group_fractions": [0.6, 0.2, 0.2], "confidence": [0.1, 0.25], "min_leaf": [20, 100], "balanced": [false, true]},
+  "threshold": 0.5,
+  "selection_metric": "average_precision",
+  "baselines": {"logistic_c": [0.1, 1.0, 10.0], "naive_bayes_smoothing": [1e-9, 1e-7]},
+  "notes": "Separate dataset-specific experiments, all downloaded records retained; identical predictor profiles stay in a single partition. No synthetic oversampling of categorical symptom data. CDC test data are not used for tuning. No changes to Pima."
+}
