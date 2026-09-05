@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.bat text eol=crlf
+# Preserve the downloaded source and reproducible CSV checksums on checkout.
+data/raw/*.arff -text
+data/derived/*.csv -text
