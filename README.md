@@ -1,5 +1,19 @@
 # Diabetes prediction with C4.5
 
+## Three separate prediction categories
+
+Run **`start.bat`** and use **Prediction category** in the sidebar:
+
+- **Women's diabetes — Clinical measurements (Pima):** the original saved model, measurements and research results. Pregnancies is an input; this model does **not** predict pregnancy or gestational diabetes.
+- **Diabetes study — Symptoms (Sylhet):** a separate questionnaire model trained on 520 records.
+- **Prediabetes / diabetes — Health indicators (CDC):** a separate model using 253,680 survey records. Its positive label includes prediabetes.
+
+Each form has a **How to fill this assessment** pop-up and field tooltips explaining definitions, units, time windows, unknown inputs and result interpretation. CDC coded categories appear as readable options. Models and inputs are kept separate; their scores are not combined.
+
+Both additional studies have completed training and evaluation under run ID `expansion-20260905`. See [additional results and reproduction commands](docs/ADDITIONAL_DATASET_RESULTS.md) and [dataset downloads and hashes](data/external/README.md). `Robustness.bat` opens the standalone additional-study dashboard. `FullRun.bat` continues to rebuild Pima only; use the documented external experiment command with a fresh run ID to retrain the other studies.
+
+The original Pima model, source data and results remain intact, with a verified snapshot in `preserved/pima-20260905-211750/`. The sections below describe the original Pima workflow.
+
 Python training and evaluation, genuine WEKA J48 C4.5, and a Streamlit research prototype. Input: the verified 768-record Pima dataset in `data/derived/pima_diabetes.csv`. The original root CSVs belong to a different dataset and are not used.
 
 The project includes data preparation, nested cross-validation, baseline comparisons, final model training, prediction explanations, and a browser-based prototype. The initial completed implementation passed all 9 tests, including app navigation and reproduction of saved held-out scores. See [the results draft](docs/IMPLEMENTATION_RESULTS.md), [implementation plan](C45_IMPLEMENTATION_PLAN.md), and [user guide](docs/USER_GUIDE.md).
