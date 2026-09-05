@@ -1,0 +1,116 @@
+{
+  "records": 768,
+  "predictors": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "class_counts": {
+    "0": 500,
+    "1": 268
+  },
+  "zero_missing_counts": {
+    "Glucose": 5,
+    "BloodPressure": 35,
+    "SkinThickness": 227,
+    "Insulin": 374,
+    "BMI": 11
+  },
+  "explicit_missing": {
+    "Pregnancies": 0,
+    "Glucose": 0,
+    "BloodPressure": 0,
+    "SkinThickness": 0,
+    "Insulin": 0,
+    "BMI": 0,
+    "DiabetesPedigreeFunction": 0,
+    "Age": 0
+  },
+  "summary": {
+    "Pregnancies": {
+      "count": 768.0,
+      "mean": 3.8450520833333335,
+      "std": 3.3695780626988694,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 3.0,
+      "75%": 6.0,
+      "max": 17.0
+    },
+    "Glucose": {
+      "count": 768.0,
+      "mean": 120.89453125,
+      "std": 31.97261819513622,
+      "min": 0.0,
+      "25%": 99.0,
+      "50%": 117.0,
+      "75%": 140.25,
+      "max": 199.0
+    },
+    "BloodPressure": {
+      "count": 768.0,
+      "mean": 69.10546875,
+      "std": 19.355807170644777,
+      "min": 0.0,
+      "25%": 62.0,
+      "50%": 72.0,
+      "75%": 80.0,
+      "max": 122.0
+    },
+    "SkinThickness": {
+      "count": 768.0,
+      "mean": 20.536458333333332,
+      "std": 15.952217567727637,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 23.0,
+      "75%": 32.0,
+      "max": 99.0
+    },
+    "Insulin": {
+      "count": 768.0,
+      "mean": 79.79947916666667,
+      "std": 115.24400235133817,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 30.5,
+      "75%": 127.25,
+      "max": 846.0
+    },
+    "BMI": {
+      "count": 768.0,
+      "mean": 31.992578124999998,
+      "std": 7.884160320375446,
+      "min": 0.0,
+      "25%": 27.3,
+      "50%": 32.0,
+      "75%": 36.6,
+      "max": 67.1
+    },
+    "DiabetesPedigreeFunction": {
+      "count": 768.0,
+      "mean": 0.47187630208333325,
+      "std": 0.3313285950127749,
+      "min": 0.078,
+      "25%": 0.24375,
+      "50%": 0.3725,
+      "75%": 0.62625,
+      "max": 2.42
+    },
+    "Age": {
+      "count": 768.0,
+      "mean": 33.240885416666664,
+      "std": 11.760231540678685,
+      "min": 21.0,
+      "25%": 24.0,
+      "50%": 29.0,
+      "75%": 41.0,
+      "max": 81.0
+    }
+  }
+}
