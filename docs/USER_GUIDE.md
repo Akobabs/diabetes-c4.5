@@ -1,5 +1,17 @@
 # Using the research prototype
 
+## Choose an assessment
+
+Double-click `start.bat`. The sidebar's **Prediction category** selects clinical measurements (Pima), symptoms (Sylhet), or health indicators (CDC). Each category loads its own model and form. Use **How to fill this assessment** above the form to open a detailed guide, and the help icon beside a field for its definition.
+
+The Pima category concerns diabetes in its original women's study population. It does not assess pregnancy or gestational diabetes. Its pregnancy-count field describes history only. Use the specified laboratory tests and units; leave unavailable values blank instead of guessing.
+
+For Sylhet, answer symptom questions with Yes, No or Unknown. For CDC, follow the stated reporting periods and choose named age, health, education and income categories. These choices map to dataset codes automatically. CDC's positive outcome includes both prediabetes and diabetes.
+
+Submit the form to see the saved model's classification, score and decision path. Any filled-in missing values are disclosed. A model score is not a calibrated medical risk and a negative result cannot rule out diabetes. These studies are separate; comparing their scores for one person does not create a combined assessment.
+
+For the new categories, choose **Results** or **Tree and data** in the sidebar to inspect held-out evaluation, limitations, source definitions and the saved tree. See [the additional-study report](ADDITIONAL_DATASET_RESULTS.md) for evaluation protocols and preservation details.
+
 ## Start
 
 In the project directory run:
