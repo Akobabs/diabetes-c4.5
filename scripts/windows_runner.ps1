@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [ValidateSet('Start', 'FullRun')][string]$Mode = 'Start',
+    [ValidateSet('Start', 'FullRun', 'Robustness')][string]$Mode = 'Start',
     [ValidateRange(1024, 65535)][int]$Port = 8501,
     [switch]$CheckOnly,
     [switch]$NoBrowser,
@@ -38,7 +38,7 @@ function Test-Python {
 
 function Ensure-Python {
     if (Test-Python $pythonPath) { return }
-    if ($Mode -eq 'Start' -or $CheckOnly) {
+    if ($Mode -ne 'FullRun' -or $CheckOnly) {
         throw 'A working .venv with 64-bit Python 3.12 is required. Install Python 3.12 and run FullRun.bat.'
     }
     if (Test-Path -LiteralPath (Join-Path $projectRoot '.venv')) {
@@ -77,7 +77,7 @@ function Ensure-Java {
             return
         }
     }
-    if ($Mode -eq 'Start' -or $CheckOnly) {
+    if ($Mode -ne 'FullRun' -or $CheckOnly) {
         throw 'Java was not found. Set JAVA_HOME to a compatible 64-bit Java installation or run FullRun.bat to download a local Java 17 runtime.'
     }
     Write-Host 'Downloading a project-local Eclipse Temurin Java 17 runtime...'
@@ -188,7 +188,8 @@ try {
         Write-Host "Prototype: http://127.0.0.1:$selectedPort"
         Write-Host 'Keep this window open. Press Ctrl+C to stop Streamlit.'
         $headless = if ($NoBrowser) { 'true' } else { 'false' }
-        Invoke-Checked $pythonPath @('-m', 'streamlit', 'run', 'app/streamlit_app.py',
+        $entryPoint = if ($Mode -eq 'Robustness') { 'app/robustness_app.py' } else { 'app/streamlit_app.py' }
+        Invoke-Checked $pythonPath @('-m', 'streamlit', 'run', $entryPoint,
             '--server.address=127.0.0.1', "--server.port=$selectedPort",
             "--server.headless=$headless", '--browser.gatherUsageStats=false')
     }
