@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diabetes-c45"
+version = "0.1.0"
+description = "Reproducible Pima diabetes research with Python, J48 C4.5 and Streamlit"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "numpy>=2,<3", "pandas>=2.2,<3", "scikit-learn>=1.6,<1.8",
+  "imbalanced-learn>=0.14,<0.15", "python-weka-wrapper3>=0.3.3,<0.4",
+  "streamlit>=1.45,<2", "matplotlib>=3.9,<4", "seaborn>=0.13,<0.14",
+  "joblib>=1.4,<2", "pytest>=8,<10"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# JPype/JVM uses native fault handlers; pytest's handler interferes on Windows.
+# https://jpype.readthedocs.io/en/latest/userguide.html#errors-reported-by-python-fault-handler
+addopts = "-p no:faulthandler"
