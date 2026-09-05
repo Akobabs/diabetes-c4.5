@@ -1,0 +1,110 @@
+[
+  {
+    "params": {
+      "confidence": 0.1,
+      "min_leaf": 2,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.8775355792682215,
+    "mean_tree_size": 20.333333333333332
+  },
+  {
+    "params": {
+      "confidence": 0.1,
+      "min_leaf": 2,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.8776089670871731,
+    "mean_tree_size": 22.333333333333332
+  },
+  {
+    "params": {
+      "confidence": 0.1,
+      "min_leaf": 10,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.8907953146030806,
+    "mean_tree_size": 9.0
+  },
+  {
+    "params": {
+      "confidence": 0.1,
+      "min_leaf": 10,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.8907578417037518,
+    "mean_tree_size": 7.666666666666667
+  },
+  {
+    "params": {
+      "confidence": 0.1,
+      "min_leaf": 20,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.8690201369230083,
+    "mean_tree_size": 5.0
+  },
+  {
+    "params": {
+      "confidence": 0.1,
+      "min_leaf": 20,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.8611387381316126,
+    "mean_tree_size": 4.333333333333333
+  },
+  {
+    "params": {
+      "confidence": 0.25,
+      "min_leaf": 2,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.8775355792682215,
+    "mean_tree_size": 23.0
+  },
+  {
+    "params": {
+      "confidence": 0.25,
+      "min_leaf": 2,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.8654917388584943,
+    "mean_tree_size": 24.333333333333332
+  },
+  {
+    "params": {
+      "confidence": 0.25,
+      "min_leaf": 10,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.8933298350987661,
+    "mean_tree_size": 10.333333333333334
+  },
+  {
+    "params": {
+      "confidence": 0.25,
+      "min_leaf": 10,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.8907578417037518,
+    "mean_tree_size": 7.666666666666667
+  },
+  {
+    "params": {
+      "confidence": 0.25,
+      "min_leaf": 20,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.8690201369230083,
+    "mean_tree_size": 5.0
+  },
+  {
+    "params": {
+      "confidence": 0.25,
+      "min_leaf": 20,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.8611387381316126,
+    "mean_tree_size": 4.333333333333333
+  }
+]

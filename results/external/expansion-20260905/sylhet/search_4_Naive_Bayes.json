@@ -1,0 +1,34 @@
+[
+  {
+    "params": {
+      "smoothing": 1e-09,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.9450384530813899,
+    "mean_tree_size": 0.0
+  },
+  {
+    "params": {
+      "smoothing": 1e-09,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.94405911724362,
+    "mean_tree_size": 0.0
+  },
+  {
+    "params": {
+      "smoothing": 1e-07,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.9450384530813899,
+    "mean_tree_size": 0.0
+  },
+  {
+    "params": {
+      "smoothing": 1e-07,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.94405911724362,
+    "mean_tree_size": 0.0
+  }
+]

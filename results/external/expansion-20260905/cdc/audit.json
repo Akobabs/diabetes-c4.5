@@ -1,0 +1,328 @@
+{
+  "rows": 253680,
+  "features": [
+    "HighBP",
+    "HighChol",
+    "CholCheck",
+    "BMI",
+    "Smoker",
+    "Stroke",
+    "HeartDiseaseorAttack",
+    "PhysActivity",
+    "Fruits",
+    "Veggies",
+    "HvyAlcoholConsump",
+    "AnyHealthcare",
+    "NoDocbcCost",
+    "GenHlth",
+    "MentHlth",
+    "PhysHlth",
+    "DiffWalk",
+    "Sex",
+    "Age",
+    "Education",
+    "Income"
+  ],
+  "categories": {
+    "HighBP": [
+      "0",
+      "1"
+    ],
+    "HighChol": [
+      "0",
+      "1"
+    ],
+    "CholCheck": [
+      "0",
+      "1"
+    ],
+    "Smoker": [
+      "0",
+      "1"
+    ],
+    "Stroke": [
+      "0",
+      "1"
+    ],
+    "HeartDiseaseorAttack": [
+      "0",
+      "1"
+    ],
+    "PhysActivity": [
+      "0",
+      "1"
+    ],
+    "Fruits": [
+      "0",
+      "1"
+    ],
+    "Veggies": [
+      "0",
+      "1"
+    ],
+    "HvyAlcoholConsump": [
+      "0",
+      "1"
+    ],
+    "AnyHealthcare": [
+      "0",
+      "1"
+    ],
+    "NoDocbcCost": [
+      "0",
+      "1"
+    ],
+    "DiffWalk": [
+      "0",
+      "1"
+    ],
+    "Sex": [
+      "0",
+      "1"
+    ]
+  },
+  "class_counts": {
+    "0": 218334,
+    "1": 35346
+  },
+  "missing": {
+    "HighBP": 0,
+    "HighChol": 0,
+    "CholCheck": 0,
+    "BMI": 0,
+    "Smoker": 0,
+    "Stroke": 0,
+    "HeartDiseaseorAttack": 0,
+    "PhysActivity": 0,
+    "Fruits": 0,
+    "Veggies": 0,
+    "HvyAlcoholConsump": 0,
+    "AnyHealthcare": 0,
+    "NoDocbcCost": 0,
+    "GenHlth": 0,
+    "MentHlth": 0,
+    "PhysHlth": 0,
+    "DiffWalk": 0,
+    "Sex": 0,
+    "Age": 0,
+    "Education": 0,
+    "Income": 0
+  },
+  "unique_profiles": 227908,
+  "repeated_profile_rows": 25772,
+  "duplicate_rows_excluding_id": 24206,
+  "profiles_with_conflicting_labels": 1566,
+  "sha256": "9f71fda9d4ae5f4878c99b9233b6a16accfa9a17c194116a6b78100540934964",
+  "metadata_sha256": "15cdeccc6e8c979b9e06ff320aa0850c25aba1bc55fe167bb0fd80fdeb55bf1f",
+  "source": "https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators",
+  "target_definition": "Prediabetes or diabetes (UCI binary definition)",
+  "variables": [
+    {
+      "name": "ID",
+      "role": "ID",
+      "type": "Integer",
+      "demographic": null,
+      "description": "Patient ID",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "Diabetes_binary",
+      "role": "Target",
+      "type": "Binary",
+      "demographic": null,
+      "description": "0 = no diabetes 1 = prediabetes or diabetes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "HighBP",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "0 = no high BP 1 = high BP",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "HighChol",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "0 = no high cholesterol 1 = high cholesterol",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "CholCheck",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "0 = no cholesterol check in 5 years 1 = yes cholesterol check in 5 years",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "BMI",
+      "role": "Feature",
+      "type": "Integer",
+      "demographic": null,
+      "description": "Body Mass Index",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "Smoker",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "Have you smoked at least 100 cigarettes in your entire life? [Note: 5 packs = 100 cigarettes] 0 = no 1 = yes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "Stroke",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "(Ever told) you had a stroke. 0 = no 1 = yes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "HeartDiseaseorAttack",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "coronary heart disease (CHD) or myocardial infarction (MI) 0 = no 1 = yes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "PhysActivity",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "physical activity in past 30 days - not including job 0 = no 1 = yes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "Fruits",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "Consume Fruit 1 or more times per day 0 = no 1 = yes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "Veggies",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "Consume Vegetables 1 or more times per day 0 = no 1 = yes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "HvyAlcoholConsump",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "Heavy drinkers (adult men having more than 14 drinks per week and adult women having more than 7 drinks per week) 0 = no 1 = yes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "AnyHealthcare",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "Have any kind of health care coverage, including health insurance, prepaid plans such as HMO, etc. 0 = no 1 = yes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "NoDocbcCost",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "Was there a time in the past 12 months when you needed to see a doctor but could not because of cost? 0 = no 1 = yes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "GenHlth",
+      "role": "Feature",
+      "type": "Integer",
+      "demographic": null,
+      "description": "Would you say that in general your health is: scale 1-5 1 = excellent 2 = very good 3 = good 4 = fair 5 = poor",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "MentHlth",
+      "role": "Feature",
+      "type": "Integer",
+      "demographic": null,
+      "description": "Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good? scale 1-30 days",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "PhysHlth",
+      "role": "Feature",
+      "type": "Integer",
+      "demographic": null,
+      "description": "Now thinking about your physical health, which includes physical illness and injury, for how many days during the past 30 days was your physical health not good? scale 1-30 days",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "DiffWalk",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": "Do you have serious difficulty walking or climbing stairs? 0 = no 1 = yes",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "Sex",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": "Sex",
+      "description": "0 = female 1 = male",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "Age",
+      "role": "Feature",
+      "type": "Integer",
+      "demographic": "Age",
+      "description": "13-level age category (_AGEG5YR see codebook) 1 = 18-24 9 = 60-64 13 = 80 or older",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "Education",
+      "role": "Feature",
+      "type": "Integer",
+      "demographic": "Education Level",
+      "description": "Education level (EDUCA see codebook) scale 1-6 1 = Never attended school or only kindergarten 2 = Grades 1 through 8 (Elementary) 3 = Grades 9 through 11 (Some high school) 4 = Grade 12 or GED (High school graduate) 5 = College 1 year to 3 years (Some college or technical school) 6 = College 4 years or more (College graduate)",
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "Income",
+      "role": "Feature",
+      "type": "Integer",
+      "demographic": "Income",
+      "description": "Income scale (INCOME2 see codebook) scale 1-8 1 = less than $10,000 5 = less than $35,000 8 = $75,000 or more",
+      "units": null,
+      "missing_values": "no"
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "rows": 520,
+  "features": [
+    "age",
+    "gender",
+    "polyuria",
+    "polydipsia",
+    "sudden_weight_loss",
+    "weakness",
+    "polyphagia",
+    "genital_thrush",
+    "visual_blurring",
+    "itching",
+    "irritability",
+    "delayed_healing",
+    "partial_paresis",
+    "muscle_stiffness",
+    "alopecia",
+    "obesity"
+  ],
+  "categories": {
+    "gender": [
+      "Female",
+      "Male"
+    ],
+    "polyuria": [
+      "No",
+      "Yes"
+    ],
+    "polydipsia": [
+      "No",
+      "Yes"
+    ],
+    "sudden_weight_loss": [
+      "No",
+      "Yes"
+    ],
+    "weakness": [
+      "No",
+      "Yes"
+    ],
+    "polyphagia": [
+      "No",
+      "Yes"
+    ],
+    "genital_thrush": [
+      "No",
+      "Yes"
+    ],
+    "visual_blurring": [
+      "No",
+      "Yes"
+    ],
+    "itching": [
+      "No",
+      "Yes"
+    ],
+    "irritability": [
+      "No",
+      "Yes"
+    ],
+    "delayed_healing": [
+      "No",
+      "Yes"
+    ],
+    "partial_paresis": [
+      "No",
+      "Yes"
+    ],
+    "muscle_stiffness": [
+      "No",
+      "Yes"
+    ],
+    "alopecia": [
+      "No",
+      "Yes"
+    ],
+    "obesity": [
+      "No",
+      "Yes"
+    ]
+  },
+  "class_counts": {
+    "0": 200,
+    "1": 320
+  },
+  "missing": {
+    "age": 0,
+    "gender": 0,
+    "polyuria": 0,
+    "polydipsia": 0,
+    "sudden_weight_loss": 0,
+    "weakness": 0,
+    "polyphagia": 0,
+    "genital_thrush": 0,
+    "visual_blurring": 0,
+    "itching": 0,
+    "irritability": 0,
+    "delayed_healing": 0,
+    "partial_paresis": 0,
+    "muscle_stiffness": 0,
+    "alopecia": 0,
+    "obesity": 0
+  },
+  "unique_profiles": 251,
+  "repeated_profile_rows": 269,
+  "duplicate_rows_excluding_id": 269,
+  "profiles_with_conflicting_labels": 0,
+  "sha256": "f6bf14c5d2e939feccd78750da2542f131b78d80355ccf35f29554b1f03fcb97",
+  "metadata_sha256": "4d18eda2a7a66c6bc32ce73f2f075451a5edd29dbaf08d18248454c7a8f56731",
+  "source": "https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction+dataset",
+  "target_definition": "Original positive diabetes-study label",
+  "variables": [
+    {
+      "name": "age",
+      "role": "Feature",
+      "type": "Integer",
+      "demographic": "Age",
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "gender",
+      "role": "Feature",
+      "type": "Categorical",
+      "demographic": "Gender",
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "polyuria",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "polydipsia",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "sudden_weight_loss",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "weakness",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "polyphagia",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "genital_thrush",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "visual_blurring",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "itching",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "irritability",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "delayed_healing",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "partial_paresis",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "muscle_stiffness",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "alopecia",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "obesity",
+      "role": "Feature",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    },
+    {
+      "name": "class",
+      "role": "Target",
+      "type": "Binary",
+      "demographic": null,
+      "description": null,
+      "units": null,
+      "missing_values": "no"
+    }
+  ]
+}

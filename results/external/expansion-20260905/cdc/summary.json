@@ -1,0 +1,133 @@
+{
+  "status": "complete",
+  "dataset": "cdc",
+  "run_id": "expansion-20260905",
+  "source_sha256": "9f71fda9d4ae5f4878c99b9233b6a16accfa9a17c194116a6b78100540934964",
+  "protocol": {
+    "protocol": "grouped_train_validation_test",
+    "group_fractions": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "confidence": [
+      0.1,
+      0.25
+    ],
+    "min_leaf": [
+      20,
+      100
+    ],
+    "balanced": [
+      false,
+      true
+    ]
+  },
+  "records": 253680,
+  "evaluated_records": 51040,
+  "positive_prevalence": 0.1387539184952978,
+  "models": {
+    "J48": {
+      "accuracy": 0.7226097178683386,
+      "precision": 0.3033351862145636,
+      "sensitivity": 0.7705450437729455,
+      "specificity": 0.7148869375312799,
+      "f1": 0.4353063178047224,
+      "roc_auc": 0.807478201927724,
+      "tn": 31425,
+      "fp": 12533,
+      "fn": 1625,
+      "tp": 5457,
+      "average_precision": 0.36257485537243495,
+      "balanced_accuracy": 0.7427159906521127,
+      "brier_score": 0.17984580592654847,
+      "bootstrap_95": {
+        "roc_auc": [
+          0.8026133301064214,
+          0.8125575815084496
+        ],
+        "average_precision": [
+          0.35467914559229885,
+          0.37381888379340583
+        ]
+      }
+    },
+    "Logistic Regression": {
+      "accuracy": 0.8648315047021944,
+      "precision": 0.5449189985272459,
+      "sensitivity": 0.15673538548432647,
+      "specificity": 0.9789116884298649,
+      "f1": 0.243447746463428,
+      "roc_auc": 0.825779725567674,
+      "tn": 43031,
+      "fp": 927,
+      "fn": 5972,
+      "tp": 1110,
+      "average_precision": 0.4102509649270777,
+      "balanced_accuracy": 0.5678235369570956,
+      "brier_score": 0.09804996902732839,
+      "bootstrap_95": {
+        "roc_auc": [
+          0.8220631426337188,
+          0.831152440692982
+        ],
+        "average_precision": [
+          0.4007944789040118,
+          0.4230434481065222
+        ]
+      }
+    },
+    "Naive Bayes": {
+      "accuracy": 0.7273706896551724,
+      "precision": 0.29870971543038943,
+      "sensitivity": 0.71589946342841,
+      "specificity": 0.7292187997634105,
+      "f1": 0.42153398461858244,
+      "roc_auc": 0.7876515661743253,
+      "tn": 32055,
+      "fp": 11903,
+      "fn": 2012,
+      "tp": 5070,
+      "average_precision": 0.3470526870289819,
+      "balanced_accuracy": 0.7225591315959103,
+      "brier_score": 0.23251085237319455,
+      "bootstrap_95": {
+        "roc_auc": [
+          0.7824558079696091,
+          0.7928264622806958
+        ],
+        "average_precision": [
+          0.33641228402763396,
+          0.3573619217995141
+        ]
+      }
+    }
+  },
+  "final_params": {
+    "J48": {
+      "confidence": 0.1,
+      "min_leaf": 20,
+      "balanced": true
+    },
+    "Naive Bayes": {
+      "smoothing": 1e-07,
+      "balanced": true
+    },
+    "Logistic Regression": {
+      "c": 0.1,
+      "balanced": false
+    }
+  },
+  "tree_size": 2047,
+  "leaf_count": 1024,
+  "model_training_rows": 202640,
+  "target": "Prediabetes or diabetes (UCI binary definition)",
+  "scope": "US health-indicator survey data; age is a category, not years. Survey weights/design variables are not supplied in this processed file.",
+  "limitations": [
+    "Separate dataset-specific experiments, not external validation of the original Pima model.",
+    "No clinical deployment or prospective validation claim.",
+    "Profile-group bootstrap intervals condition on saved predictions; they exclude model-refitting uncertainty and survey-design effects.",
+    "Class-weighted tree scores are not calibrated probabilities.",
+    "Subgroup figures are descriptive; small subgroups can be unstable."
+  ]
+}

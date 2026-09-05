@@ -1,0 +1,74 @@
+[
+  {
+    "params": {
+      "confidence": 0.1,
+      "min_leaf": 20,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.3364755121056979,
+    "mean_tree_size": 113.0
+  },
+  {
+    "params": {
+      "confidence": 0.1,
+      "min_leaf": 20,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.3694861990334259,
+    "mean_tree_size": 1645.0
+  },
+  {
+    "params": {
+      "confidence": 0.1,
+      "min_leaf": 100,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.3346760278664982,
+    "mean_tree_size": 51.0
+  },
+  {
+    "params": {
+      "confidence": 0.1,
+      "min_leaf": 100,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.35110814870139395,
+    "mean_tree_size": 285.0
+  },
+  {
+    "params": {
+      "confidence": 0.25,
+      "min_leaf": 20,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.35657828698445865,
+    "mean_tree_size": 507.0
+  },
+  {
+    "params": {
+      "confidence": 0.25,
+      "min_leaf": 20,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.3692423910995315,
+    "mean_tree_size": 2435.0
+  },
+  {
+    "params": {
+      "confidence": 0.25,
+      "min_leaf": 100,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.3398815764352745,
+    "mean_tree_size": 71.0
+  },
+  {
+    "params": {
+      "confidence": 0.25,
+      "min_leaf": 100,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.3572059084635438,
+    "mean_tree_size": 389.0
+  }
+]

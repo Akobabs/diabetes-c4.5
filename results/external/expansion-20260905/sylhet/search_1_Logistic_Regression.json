@@ -1,0 +1,50 @@
+[
+  {
+    "params": {
+      "c": 0.1,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.9858490998700119,
+    "mean_tree_size": 0.0
+  },
+  {
+    "params": {
+      "c": 0.1,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.9859264662973993,
+    "mean_tree_size": 0.0
+  },
+  {
+    "params": {
+      "c": 1.0,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.9805193845361934,
+    "mean_tree_size": 0.0
+  },
+  {
+    "params": {
+      "c": 1.0,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.9806648654250972,
+    "mean_tree_size": 0.0
+  },
+  {
+    "params": {
+      "c": 10.0,
+      "balanced": false
+    },
+    "mean_validation_average_precision": 0.9751675679427465,
+    "mean_tree_size": 0.0
+  },
+  {
+    "params": {
+      "c": 10.0,
+      "balanced": true
+    },
+    "mean_validation_average_precision": 0.9758196105776227,
+    "mean_tree_size": 0.0
+  }
+]
