@@ -28,12 +28,12 @@ def test_streamlit_prediction_and_navigation():
     assert not app.exception
     assert len(app.number_input) == 8
     # No patient data defaults silently fill the form.
-    app.button[0].click().run()
+    next(b for b in app.button if b.label == 'Show prediction').click().run()
     assert app.warning
     x, _ = load_data()
     for widget in app.number_input:
         widget.set_value(float(x.iloc[0][widget.key]) if widget.key not in ["Age", "Pregnancies"] else int(x.iloc[0][widget.key]))
-    app.button[0].click().run()
+    next(b for b in app.button if b.label == 'Show prediction').click().run()
     assert not app.exception
     assert len(app.metric) == 3
     for page in ["Research results", "Decision tree", "About the study", "Predict"]:
